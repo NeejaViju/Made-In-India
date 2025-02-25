@@ -7,13 +7,13 @@ describe('Made in India - Insights > Content', () => {
         cy.url().should('include', '/blank-2');
     });
 
-    it.only('Step 3: Verify Blog Post Title is Visible on Insights Page', () => {
+    it('Step 3: Verify Blog Post Title is Visible on Insights Page', () => {
         cy.log('Step 3.1: Verify the Blog Post Title is Present');
         cy.xpath("//h2[text()='Effektivitet i Varje Detalj: Optimizing Your Commercial Kitchen with Quality Tools']")
           .should('be.visible');
     });
 
-    it.only('Step 4: Click on Blog Post Title and Verify Redirection', () => {
+    it('Step 4: Click on Blog Post Title and Verify Redirection', () => {
         cy.log('Step 4.1: Click on the Blog Post Title');
         cy.xpath("//h2[text()='Effektivitet i Varje Detalj: Optimizing Your Commercial Kitchen with Quality Tools']").click();
 
@@ -21,7 +21,7 @@ describe('Made in India - Insights > Content', () => {
         cy.url().should('eq', Cypress.config().baseUrl + '/post/effektivitet-i-varje-detalj-optimizing-your-commercial-kitchen-with-quality-tools');
 
     });
-    it.only('Step 4: Verify Blog Post Title on the Blog Page', () => {
+    it('Step 4: Verify Blog Post Title on the Blog Page', () => {
         
         cy.log('Step 4.1: Visit the Blog Post Page Directly');
         cy.visit('/post/effektivitet-i-varje-detalj-optimizing-your-commercial-kitchen-with-quality-tools');
